@@ -1,9 +1,7 @@
 import json
 import os
 
-
 FILE_NAME = "students.json"
-
 if os.path.exists(FILE_NAME):
     with open(FILE_NAME, "r")as file:
         students = json.load(file)
@@ -14,9 +12,6 @@ else:
 def save_students():
     with open(FILE_NAME, "w") as file:
         json.dump(students,file, indent=4)
-
-
-
 
 
 
@@ -90,7 +85,6 @@ def delete_student():
             print("Student deleted successfully!")
             return
     print("Student not found.")
-
 
 
 
